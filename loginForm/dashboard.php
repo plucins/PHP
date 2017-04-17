@@ -49,12 +49,47 @@
       <button type="submit" class="popup-with-form" href="#test-form">Dodaj</button>
     </div>
 
-<<<<<<< HEAD
-=======
+
+    <!-- form itself -->
+          <form id="test-form" class="mfp-hide white-popup-block">
+            <div id="wrapper">
+              <div class="popup-form">
+                <div class="add_form_input">
+
+                  <input type="text" class="input_text short" name="id" placeholder="User ID">
+                  <button type="submit" value="szukaj" action="#test-form" >szukaj</button>
+                  <input type="text" class="input_text long" placeholder="User Name">
+                  <input type="text" class="input_text long" placeholder="User Name">
+                  <input type="text" class="input_text long" placeholder="User Name">
+                </div>
+              </div>
+            </div>
+          </form>
+            </div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('.popup-with-form').magnificPopup({
+              type: 'inline',
+              preloader: false,
+              focus: '#name',
+              callbacks: {
+                beforeOpen: function() {
+                  if($(window).width() < 700) {
+                    this.st.focus = false;
+                  } else {
+                    this.st.focus = '#name';
+                  }
+                }
+              }
+            });
+          });
+        </script>
+      </div>
+
+  </div>
 
 
 
->>>>>>> origin/master
 </body>
 
 
